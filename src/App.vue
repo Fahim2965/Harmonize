@@ -1,47 +1,28 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+ <v-bottom-navigation :elevation="24" mode="shift">
+  <v-btn value="recent">
+    <v-icon>mdi-history</v-icon>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    Recent
+  </v-btn>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <v-btn value="favorites">
+    <v-icon>mdi-heart</v-icon>
+
+    Favorites
+  </v-btn>
+
+  <v-btn value="nearby">
+    <v-icon>mdi-map-marker</v-icon>
+
+    Nearby
+  </v-btn>
+</v-bottom-navigation>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
