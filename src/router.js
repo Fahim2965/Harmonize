@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, creatWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from './views/HomePage.vue'
 
 const routes = [
