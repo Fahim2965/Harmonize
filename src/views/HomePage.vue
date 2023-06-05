@@ -1,3 +1,10 @@
 <template>
-    <h1>Home Page</h1>
+<body>
+<h1>Hello </h1>
+</body>
+
 </template>
+
+<style scoped>
+
+</style>
