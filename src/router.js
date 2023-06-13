@@ -1,19 +1,28 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomePage from './views/HomePage.vue'
-import SignUp from './views/SignUp.vue'
-import PlayList from './views/PlayList.vue'
-
 
 const routes = [
+   {
+      path: '/',
+      name: 'home',
+      component: HomePage =>
+      import(/* webpackChunkName: "home" */ '../views/HomePage.vue')
+   },
+   {
+    path: '/discover',
+    name: 'discover',
+    component: AboutPage =>
+    import(/* webpackChunkName: "about" */ '../views/AboutPage.vue')
+   },
     {
-        path: '/',
-        component: HomePage
-    },
+      path: '/search',
+      name: 'search',
+      component: SearchPage =>
+      import(/* webpackChunkName: "home" */ '../views/SearchPage.vue')
+   },
 ]
 
-const router = createRouter ({
-    history: createWebHashHistory(),
-    routes
+const router = createRouter({
+   history: createWebHashHistory(),
+   routes
 })
-
 export default router
